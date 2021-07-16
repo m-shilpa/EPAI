@@ -59,7 +59,7 @@ class Polygon:
     def calc_apothem(self):
         """ This function calculates the Apothem of the polygon. """
 
-        return self.circumradius * math.cos(math.pi * self.n_vertices)
+        return self.circumradius * math.cos(math.pi / self.n_vertices)
     
     def calc_area(self):
         """ This function calculates the Area of the polygon. """
