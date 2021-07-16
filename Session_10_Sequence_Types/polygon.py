@@ -12,26 +12,21 @@ def validate_type(d_type):
         return inner
     return validate
   
-def validate_polygon(poly_class):
-    """ Function to validate the parameters passed to the Polygon Class  """
+def validate_params(poly_class):
+    """ This function validates the parameters passed to Polygon_Sequence Class """
 
     @wraps(poly_class)
-    def inner(num_vertices,circumradius):
-        """ Decorator that checks:
-            1. If the Number of Vertices passed to the Class to more than 3
-            2. IF the Curcum Radius is more than 0  
-        """
+    def inner(num,circumradius):
+        """ This Decorator checks if the circumradius <= 0 or num <3  """
 
-        if circumradius <= 0 :
-            return "Error: Cannot create polygon.Circum Radius is too small"
-        elif num_vertices < 3:
-            return "Error: Cannot create polygon.No. of vertices is too small"
+        if circumradius <= 0 or num <3 :
+            return  "Error: Incorrect parameters for Class"
         else:
-            return poly_class(num_vertices,circumradius)
+            return poly_class(num,circumradius)
     return inner
 
 @validate_type(int)
-@validate_polygon
+@validate_params
 class Polygon:
     """ A Polygon Class """
 
