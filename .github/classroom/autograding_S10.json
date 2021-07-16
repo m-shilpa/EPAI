@@ -1,7 +1,7 @@
 {
   "tests": [
     {
-      "name": "test_session10",
+      "name": "Session_10_Sequence_Types/test_session10",
       "run": "pytest -vv",
       "input": "",
       "output": "",
