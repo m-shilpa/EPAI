@@ -11,13 +11,15 @@ import inspect
 import os
 import re
 
+README_PATH = "Session_10_Sequence_Types/README.md"
+
 README_CONTENT_CHECK_FOR = [
     "Polygon Sequence",
     "Polygon",
 ]
 
 def test_readme_exists():
-    assert os.path.isfile("README.md"), "README.md file missing!"
+    assert os.path.isfile(README_PATH), "README.md file missing!"
 
 def test_readme_contents():
     readme = open("README.md", "r")
@@ -27,7 +29,7 @@ def test_readme_contents():
 
 def test_readme_proper_description():
     READMELOOKSGOOD = True
-    f = open("README.md", "r", encoding="utf-8")
+    f = open(README_PATH, "r", encoding="utf-8")
     content = f.read()
     f.close()
     for c in README_CONTENT_CHECK_FOR:
@@ -38,7 +40,7 @@ def test_readme_proper_description():
     assert READMELOOKSGOOD == True, "You have not described all the functions/class well in your README.md file"
 
 def test_readme_file_for_formatting():
-    f = open("README.md", "r", encoding="utf-8")
+    f = open(README_PATH, "r", encoding="utf-8")
     content = f.read()
     f.close()
     print(content.count("#"))
