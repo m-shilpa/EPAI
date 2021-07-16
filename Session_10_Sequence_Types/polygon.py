@@ -66,7 +66,7 @@ class Polygon:
 
         s = self.calc_edgeLength() 
         a = self.calc_apothem()
-        return 12 * self.n_vertices * s * a
+        return (1/2) * self.n_vertices * s * a
     
     def calc_perimeter(self):
         """ This function calculates the Perimeter of the polygon. """
