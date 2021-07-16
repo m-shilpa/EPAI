@@ -1,0 +1,19 @@
+name: Session 10 Sequence Types
+
+on:
+  push:
+    paths:
+      - Session_10_Sequence_Types/**
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: education/autograding@v1
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
