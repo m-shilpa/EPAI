@@ -12,7 +12,7 @@ def validate_type(d_type):
         return inner
     return validate
   
- def validate_polygon(poly_class):
+def validate_polygon(poly_class):
     """ Function to validate the parameters passed to the Polygon Class  """
 
     @wraps(poly_class)
