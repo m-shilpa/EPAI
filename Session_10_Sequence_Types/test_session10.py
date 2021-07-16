@@ -32,6 +32,7 @@ def test_readme_proper_description():
     f.close()
     for c in README_CONTENT_CHECK_FOR:
         if c not in content:
+            print(c)
             READMELOOKSGOOD = False
             pass
     assert READMELOOKSGOOD == True, "You have not described all the functions/class well in your README.md file"
@@ -40,6 +41,7 @@ def test_readme_file_for_formatting():
     f = open("README.md", "r", encoding="utf-8")
     content = f.read()
     f.close()
+    print(content.count("#"))
     assert content.count("#") >= 10
 
 def test_polygon_incorrect_params():
