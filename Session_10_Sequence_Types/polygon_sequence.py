@@ -3,21 +3,8 @@ import math
 from functools import wraps,lru_cache
 from collections import namedtuple
 
-def validate_polygon_sequence(poly_class):
-    """ This function validates the parameters passed to Polygon_Sequence Class """
-
-    @wraps(poly_class)
-    def inner(num_vertices,circumradius):
-        """ This Decorator checks if the circumradius <= 0 or num_vertices <3  """
-
-        if circumradius <= 0 or num_vertices <3 :
-            return  "Error: Incorrect parameters for Class"
-        else:
-            return poly_class(num_vertices,circumradius)
-    return inner
-
 @validate_type(int)
-@validate_polygon_sequence
+@validate_params
 class Polygon_sequence:
 
     def __init__(self,n,circumradius):
