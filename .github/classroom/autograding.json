@@ -9,6 +9,16 @@
       "comparison": "included",
       "timeout": 2,
       "points": 500
+    },
+    {
+      "name": "Session_12_Iterables_II/test_session12.py",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -vv",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 500
     }
   ]
 }
