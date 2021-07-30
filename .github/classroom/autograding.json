@@ -1,7 +1,7 @@
 {
   "tests": [
     {
-      "name": "Session_12_Iterables_II/test_session12.py",
+      "name": "Session_10_Sequence_Types/test_session10",
       "setup": "sudo -H pip3 install pytest",
       "run": "pytest -vv",
       "input": "",
