@@ -14,6 +14,9 @@ You'll need to implement both an iterable, and an iterator.
 
 ## Classes and Functions
 
+<a href="https://colab.research.google.com/drive/1QhdOQehsCBEvySigZB2mKIX8abM8gjlC?usp=sharing"><b>Colab Link</b></a>
+
+
 ### **Polygon Class:**
 
 This class provides the properties of a polygon such as vertex, circum radius, interior angle, edge length , apothem, area and perimeter. All the properties are calculated only once for an object. They are stored after being calculated for the first time, then they are re-used when called more than once.
