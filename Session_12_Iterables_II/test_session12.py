@@ -1,5 +1,5 @@
-import Session_12_Iterables_II/polygon as polygon
-import Session_12_Iterables_II/polygon_sequence as polygon_sequence
+import polygon
+import polygon_sequence
 from polygon import *
 from polygon_sequence import *
 from datetime import datetime
